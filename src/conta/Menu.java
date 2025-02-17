@@ -3,6 +3,8 @@ package conta;
 import java.util.Scanner;
 import conta.util.Cores;
 import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 public class Menu {
 	public static void main(String[] args) {
@@ -12,13 +14,21 @@ public class Menu {
 		//incializar scanner
 		Scanner scanner = new Scanner(System.in);
 		
-		//testar classe Conta
-		Conta contaNova = new Conta(1, 123, 1, "Adriana", 10000.0f);
-		contaNova.visualizar();
-		contaNova.sacar(12000.0f);
-		contaNova.visualizar();
-		contaNova.depositar(5000.0f);
-		contaNova.visualizar();
+		// teste conta corrente
+		ContaCorrente cc1 = new ContaCorrente(1, 123, 1, "José da Silva", 0.0f, 1000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+		
+		// teste conta poupança
+		ContaPoupanca cp1 = new ContaPoupanca(2, 123, 2, "Maria dos Santos", 100000.0f, 15);
+		cp1.visualizar();
+        cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
 		
 		//menu que rodará até entrar na opção 9
 		while(true) {

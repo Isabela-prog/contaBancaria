@@ -1,6 +1,6 @@
 package conta.model;
 
-public class Conta {	
+public abstract class Conta {	
 	/*
 	 * atributos da classe Conta
 	 * private: 
