@@ -2,6 +2,7 @@ package conta;
 
 import java.io.IOException;
 
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import conta.util.Cores;
@@ -272,13 +273,14 @@ public class Menu {
 				
 	}
 	
-	//método de teclar enter para continuar
+	// método de teclar enter para continuar
 	public static void keyPress() {
 		try {
-		System.out.println(Cores.TEXT_RESET + "\n\nPressione Enter para continuar...");
-		//leitura das teclas -> se for digitado qlqr outra tecla, retorna -1 (método Keyoress)
-		System.in.read();
-		}catch(IOException e) {
+			System.out.println(Cores.TEXT_RESET + "\n\nPressione Enter para continuar...");
+			// leitura das teclas -> se for digitado qlqr outra tecla, retorna -1 (método
+			// Keyoress)
+			System.in.read();
+		} catch (IOException e) {
 			System.out.println("Você pressionou uma tecla diferente");
 		}
 	}

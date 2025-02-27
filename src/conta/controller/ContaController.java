@@ -2,8 +2,10 @@ package conta.controller;
 
 import java.util.ArrayList;
 
+
 import conta.model.Conta;
 import conta.repository.ContaRepository;
+
 
 public class ContaController implements ContaRepository{
 	
@@ -71,6 +73,7 @@ public class ContaController implements ContaRepository{
 		
 		// verificar se a conta existe
 		if(conta != null) {
+			conta.sacar(valor);
 			System.out.println("\nO saque na Conta numero: " + numero + " foi efetuado com sucesso!");
 		}else {
 			System.out.println("\nA conta numero: " + numero + " não foi encontrada");
